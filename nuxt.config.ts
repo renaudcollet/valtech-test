@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       appUrl: process.env.NUXT_APP_URL,
+      apiDataUrl: process.env.NUXT_APP_URL + '/datas.json'
     }
   },
   

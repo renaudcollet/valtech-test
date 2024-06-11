@@ -1,0 +1,52 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "city": "New York",
+            "country": "USA",
+            "resume": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies ultricies, nunc nunc.",
+            "link": "https://www.google.com/?q=New+York",
+            "image": "https://picsum.photos/id/10/582/400"
+        },
+        {
+            "id": 2,
+            "city": "Paris",
+            "country": "France",
+            "resume": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies ultricies, nunc nunc.",
+            "link": "https://www.google.com/?q=Paris",
+            "image": "https://picsum.photos/id/15/582/400"
+        },
+        {
+            "id": 3,
+            "city": "Tokyo",
+            "country": "Japan",
+            "resume": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies ultricies, nunc nunc.",
+            "link": "https://www.google.com/?q=Tokyo",
+            "image": "https://picsum.photos/id/30/582/400"
+        },
+        {
+            "id": 4,
+            "city": "London",
+            "country": "England",
+            "resume": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies ultricies, nunc nunc.",
+            "link": "https://www.google.com/?q=London",
+            "image": "https://picsum.photos/id/40/582/400"
+        },
+        {
+            "id": 5,
+            "city": "Berlin",
+            "country": "Germany",
+            "resume": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies ultricies, nunc nunc.",
+            "link": "https://www.google.com/?q=Berlin",
+            "image": "https://picsum.photos/id/45/582/400"
+        },
+        {
+            "id": 6,
+            "city": "Rome",
+            "country": "Italy",
+            "resume": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies ultricies, nunc nunc.",
+            "link": "https://www.google.com/?q=Rome",
+            "image": "https://picsum.photos/id/55/582/400"
+        }
+    ]
+}

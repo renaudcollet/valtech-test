@@ -1,16 +1,22 @@
 <template>
     <Header />
     <div class="cards">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <template v-for="card in storeDatas.datas.cards">
+            <Card :card="card" />
+        </template>
     </div>
 </template>
 
 <script setup>
+import Card from '@/components/Card.vue';
+import Header from '@/components/Header.vue';
+
+import { useDatasStore } from '~/stores/datas';
+
+const storeDatas = useDatasStore();
+const { fetchDatas } = storeDatas;
+await fetchDatas();
+
 
 </script>
 

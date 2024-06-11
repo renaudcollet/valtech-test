@@ -1,21 +1,27 @@
 <template>
-    <div class="card" :class="{'card--hover': isMouseOver}">
-        <div class="card__bg"></div>
+    <div class="card" :class="{'card--hover': isMouseOver}" @mouseover="onMouseOver" @mouseout="onMouseOut">
+        <div class="card__bg" :style="`background-image: url(${props.card.image})`"></div>
         <div class="card__title">
-            <div class="card__title__country">ITALY</div>
-            <h2 class="card__title__h2">VENICE</h2>
+            <div class="card__title__country">{{ props.card.country }}</div>
+            <h2 class="card__title__h2">{{ props.card.city }}</h2>
         </div>
-        <p class="card__p">
-            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. 
-        </p>
-        <a class="card__a" href="/">Explore more</a>
+        <p class="card__p" v-html="props.card.resume"></p>
+        <a class="card__a" :href="props.card.link" target="_blank">Explore more</a>
     </div>
 </template>
 
-<script setup>
-import { onMounted, onUnmounted } from 'vue';
+<script setup lang="ts">
+const props = defineProps<{
+    card: {
+        city: string,
+        country: string,
+        resume: string,
+        link: string,
+        image: string,
+    }
+}>()
 
-const isMouseOver = ref(false)
+const isMouseOver:Ref<boolean> = ref(false)
 
 const onMouseOver = () => {
     isMouseOver.value = true
@@ -24,15 +30,4 @@ const onMouseOver = () => {
 const onMouseOut = () => {
     isMouseOver.value = false
 }
-
-onMounted(() => {
-    card.value.addEventListener('mouseover', onMouseOver)
-    card.value.addEventListener('mouseout', onMouseOut)
-})
-
-onUnmounted(() => {
-    card.value.removeEventListener('mouseover', onMouseOver)
-    card.value.removeEventListener('mouseout', onMouseOut)
-})
-
 </script>
