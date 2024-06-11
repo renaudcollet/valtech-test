@@ -4,7 +4,7 @@
         <div class="content">
             <div class="cat">Front-end</div>
             <h1>valtech_</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
     </header>
 </template>
@@ -35,20 +35,35 @@
     .cat {
         color: #fff;
         text-transform: uppercase;
-        font-size: 0.75rem;
         font-weight: 300;
+        font-size: 0.65rem;
+        letter-spacing: 0.15rem;
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: 0.75rem;
+            letter-spacing: 0.25rem;
+        }
     }
     h1 {
         color: #fff;
         font-size: 3rem;
         margin: 0;
         font-weight: 500;
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: 5rem;
+        }
     }
     p {
         font-weight: 300;
         text-align: center;
-        line-height: 1;
+        line-height: 1.1rem;
         font-size: 0.8rem;
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: 1rem;
+            line-height: 1.3rem;
+        }
     }
     .bg {
         position: absolute;
@@ -63,6 +78,10 @@
 
         @media (min-width: $breakpoint-md) {
             background-image: url(//picsum.photos/id/18/600/300);
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            background-image: url(//picsum.photos/id/18/1280/400);
         }
     }
 </style>

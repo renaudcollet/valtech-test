@@ -20,3 +20,15 @@
         visibility: hidden;
     }
 }
+
+@keyframes fadeInVisibilityBg {
+    0% {
+        opacity: 0.3;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
