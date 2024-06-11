@@ -1,0 +1,117 @@
+.card {
+
+    border: 0;
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 20px;
+    cursor: pointer;
+
+    &__title {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: top 0.5s ease-out;
+
+        .card--hover & {
+            top: 20%;
+        }
+
+        &__country {
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 300;
+        }
+    
+        &__h2 {
+            font-size: 1.5rem;
+            margin: 0.2rem 0 0;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+        }   
+    }
+
+    &__bg {
+        position: absolute;
+        background: url(//picsum.photos/id/10/600/300);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+
+            .card--hover & {
+                animation: fadeInVisibility 0.5s 0.2s forwards;
+            }
+        }
+
+        @media (min-width: $breakpoint-md) {
+            background-image: url(//picsum.photos/id/10/600/300);
+        }
+    }
+
+    &__p {
+        text-align: center;
+        font-size: 0.75rem;
+        font-weight: 300;
+        padding: 1rem;
+        margin: 0;
+        max-width: 350px;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: 0.85rem;
+        }
+
+        .card--hover & {
+            animation: fadeInVisibility 0.6s 0.5s forwards;
+        }
+    }
+    
+
+    &__a {
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        font-size: 0.5rem;
+        letter-spacing: 0.025rem;
+        padding: 0.25rem 0.5rem;
+        position: absolute;
+        bottom: 50px;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: 0.75rem;
+        }
+
+        .card--hover & {
+            animation: fadeInVisibility 0.6s 0.7s forwards;
+        }
+    }
+}

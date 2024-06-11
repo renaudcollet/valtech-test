@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'fonts';
+@import 'animations';
+@import 'card';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+  text-rendering: optimizeLegibility;
+  overscroll-behavior: none;
+  font-synthesis: none;
+}
+
+html {
+    font-family: $font-main;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: $breakpoint-xl;
+    margin: 0 auto;
+}
