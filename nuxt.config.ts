@@ -1,8 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// https://nuxt.com/docs/migration
 
 export default defineNuxtConfig({
-  telemetry: false, // For nuxt team (anonyous statistics)
+  telemetry: false,
 
   ssr: true,
 

@@ -2,6 +2,13 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Dependencies
+
+[Sass](https://sass-lang.com/) for ease to write BEM css and more features
+[Pinia](https://pinia.vuejs.org/ssr/nuxt.html) to enable store abilities, to manage datas all in the same place
+[postcss](https://postcss.org/) to add vendor prefixes
+[cssnano](https://github.com/cssnano/cssnano) to minify css
+
 ## Setup
 
 Make sure to install the dependencies:
